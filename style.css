@@ -1,0 +1,71 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:black;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* INTRO CINEMA */
+#intro{
+  position:fixed;
+  inset:0;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  z-index:9999;
+  animation:fade 4s forwards;
+}
+
+@keyframes fade{
+  0%{opacity:1;}
+  80%{opacity:1;}
+  100%{opacity:0;visibility:hidden;}
+}
+
+/* ESCENAS */
+.screen{
+  display:none;
+  min-height:100vh;
+  padding:20px;
+  transition:1s;
+}
+
+.screen.active{
+  display:block;
+  animation:zoom 1s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(1.1);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+/* FONDOS CINEMATICOS */
+#level1{background:linear-gradient(135deg,#ff416c,#ff4b2b);}
+#level2{background:linear-gradient(135deg,#1e3c72,#2a5298);}
+#level3{background:linear-gradient(135deg,#f7971e,#ffd200);}
+#final{background:linear-gradient(135deg,#8e2de2,#4a00e0);}
+
+/* CANVAS */
+canvas{
+  width:90%;
+  max-width:400px;
+  height:200px;
+  background:rgba(255,255,255,0.2);
+  border-radius:10px;
+}
+
+/* CARTA */
+.card{
+  background:white;
+  color:black;
+  padding:20px;
+  border-radius:15px;
+  max-width:90%;
+  margin:auto;
+  font-size:18px;
+}

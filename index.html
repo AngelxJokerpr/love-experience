@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Story AAA ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- INTRO CINEMA -->
+<div id="intro">
+💫 Una historia que parece película...
+</div>
+
+<!-- LOGIN -->
+<section id="login" class="screen active">
+  <h2>🔐 Código secreto</h2>
+  <input type="password" id="pass" placeholder="071605">
+  <button onclick="start()">Entrar</button>
+</section>
+
+<!-- NIVEL 1 -->
+<section id="level1" class="screen level">
+  <h1>🏰 Disney / Mario World</h1>
+  <p>Ella me pidió ser su novio a mí ❤️</p>
+  <canvas id="game1"></canvas>
+  <button onclick="next('level2')">Siguiente</button>
+</section>
+
+<!-- NIVEL 2 -->
+<section id="level2" class="screen level">
+  <h1>🚢 Crucero</h1>
+  <p>Un viaje que nunca olvidaré 🌊</p>
+  <canvas id="game2"></canvas>
+  <button onclick="next('level3')">Siguiente</button>
+</section>
+
+<!-- NIVEL 3 -->
+<section id="level3" class="screen level">
+  <h1>🎮 Epic Universe</h1>
+  <p>Destino, magia y amor ❤️</p>
+  <canvas id="game3"></canvas>
+  <button onclick="next('letter')">Carta</button>
+</section>
+
+<!-- CARTA -->
+<section id="letter" class="screen">
+  <h1>💌 Carta de 7 meses</h1>
+  <div class="card">
+    <p id="text"></p>
+  </div>
+  <button onclick="next('final')">Final</button>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="screen">
+  <h1>💍 Para siempre</h1>
+  <p>Esto es solo el inicio ❤️</p>
+</section>
+
+<audio id="music" loop>
+  <source src="musica.mp3">
+</audio>
+
+<script src="app.js"></script>
+</body>
+</html>
