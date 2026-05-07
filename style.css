@@ -1,0 +1,64 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0b0b0f;
+  color:white;
+}
+
+.app{
+  height:100vh;
+}
+
+.screen{
+  display:none;
+  height:100vh;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+.active{
+  display:flex;
+}
+
+.card{
+  background:#1c1c2a;
+  padding:20px;
+  border-radius:12px;
+}
+
+input{
+  padding:10px;
+  border-radius:8px;
+  text-align:center;
+}
+
+button{
+  margin-top:10px;
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+}
+
+/* PUZZLE */
+#board{
+  width:300px;
+  height:300px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(3,1fr);
+  gap:2px;
+}
+
+.piece{
+  background-image:url("assets/foto.jpg");
+  background-size:300px 300px;
+}
+
+.empty{
+  background:none;
+}

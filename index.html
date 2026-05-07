@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Experience</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- LOGIN -->
+<section id="login" class="screen active">
+  <div class="card">
+    <h2>🔐 Love Experience</h2>
+    <input type="password" id="pass" placeholder="Código">
+    <button onclick="start()">Entrar</button>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro" class="screen">
+  <h1>🎬 Nuestra Historia</h1>
+  <button onclick="next('chapter1')">Comenzar</button>
+</section>
+
+<!-- CAPÍTULOS -->
+<section id="chapter1" class="screen">
+  <h2>💌 Carta</h2>
+  <p>Todo comenzó contigo ❤️</p>
+  <button onclick="next('chapter2')">Siguiente</button>
+</section>
+
+<section id="chapter2" class="screen">
+  <h2>🚢 Crucero</h2>
+  <p>Un recuerdo que cambió todo</p>
+  <button onclick="next('chapter3')">Siguiente</button>
+</section>
+
+<section id="chapter3" class="screen">
+  <h2>🎮 Epic Universe</h2>
+  <p>El momento más especial ❤️</p>
+  <button onclick="next('game')">Jugar</button>
+</section>
+
+<!-- JUEGO -->
+<section id="game" class="screen">
+  <h2>🧩 Puzzle</h2>
+  <div id="board"></div>
+  <button onclick="shuffle()">Mezclar</button>
+  <p id="win">💍 Completado</p>
+  <button onclick="next('final')">Final</button>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="screen">
+  <h1>💍 Producto final: Amor infinito</h1>
+  <p>Esto es solo el inicio ❤️</p>
+</section>
+
+</div>
+
+<audio id="music" loop>
+  <source src="assets/musica.mp3">
+</audio>
+
+<script src="app.js"></script>
+</body>
+</html>
